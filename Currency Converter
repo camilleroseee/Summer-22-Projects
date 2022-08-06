@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+// currency converter program that takes US dollars and converts to yen, pesos, and euros 
+int main() {
+  // creating variables for each input currency 
+  double usDollar; 
+  string desiredCurrency; 
+  cout << "Currency Converter Program \n";
+  cout << "Enter the amount of US dollars you wish to convert: \n";
+  cin >> usDollar; 
+
+  // conversion rates for each currency 
+  double euro = usDollar * 0.98; 
+  double pesos = usDollar * 55.36; 
+  double yen = usDollar * 133.25; 
+
+  // prompt user to enter desired currency 
+  cout<< "Enter EUR for Euros, YE for Yen, and PE for Pesos: \n";
+  cin >> desiredCurrency; 
+
+  // logic for converting between currencies 
+
+  // if statement for Euros 
+  if(desiredCurrency == "EUR"){
+    cout << usDollar << " US Dollars in Euros: "<<euro; 
+  }
+  // else if statement for Yen 
+  else if(desiredCurrency == "YE"){
+    cout << usDollar << " US Dollars in Yen: "<< yen; 
+  }
+  // else if statement for Pesos 
+  else if(desiredCurrency =="PE"){
+    cout << usDollar << " US Dollars in Pesos: "<<pesos; 
+  }
+  // else statement for any invalid inputs (i.e. currencies other than the listed ones)
+  else{
+    cout << "Invalid input. Try again.\n";
+  }
+
+}
